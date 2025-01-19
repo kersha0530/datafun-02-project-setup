@@ -13,7 +13,7 @@ Author: Kersha Broussard
 #####################################
 import pathlib
 import time  # For time.sleep in the periodic folder creation function
-import os  # For normalizing folder names
+import os  # For folder names
 
 #####################################
 # Declare global variables
@@ -46,7 +46,7 @@ def create_folders_for_range(start_year: int, end_year: int) -> None:
     # Log the function call and its arguments using an f-string
     print(f"FUNCTION CALLED: create_folders_for_range with start_year={start_year} and end_year={end_year}")
 
-    # TODO: Implement the actual folder creation logic
+
     pass
 
 def create_folders_for_range(start_year: int, end_year: int) -> None:
@@ -102,7 +102,7 @@ def create_folders_periodically(duration_seconds: int) -> None:
     '''
     print(f"FUNCTION CALLED: create_folders_periodically with duration_seconds={duration_seconds}")
     folder_index = 1
-    while folder_index <= 3:  # Example: Create 3 folders
+    while folder_index <= 3:  # Create 3 folders
         folder_path = project_path.joinpath(f"periodic_folder_{folder_index}")
         folder_path.mkdir(exist_ok=True)
         print(f"Created folder: {folder_path}")
